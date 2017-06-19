@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!-- <properties resource="oracle.properties"></properties> -->
+	
+	<!-- 别名 -->
+	<typeAliases>
+		<typeAlias type="java.util.concurrent.ConcurrentHashMap" alias="mapper"/>
+	</typeAliases>
+	
+	<!-- 处理器 -->
+	<typeHandlers></typeHandlers>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"></transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" /> 
+				<property name="url" value="jdbc\:oracle\:thin\:@127.0.0.1\:1521\:XE" /> 
+				<property name="username" value="quxiqi" />
+				<property name="password" value="asas123" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="test/TestMapper.xml"/>
+	</mappers>
+	
+</configuration>

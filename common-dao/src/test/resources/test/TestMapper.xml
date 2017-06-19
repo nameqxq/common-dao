@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- com.quxiqi.bysj.dao.mapper.UserMapper是我们定义接口的全限定名字 这样就可以使用接口调用映射的SQL语句了 这个名字一定要和接口对应上-->
+<mapper namespace="com.quxiqi.test.TestMapper">
+	
+	<resultMap type="mapper" id="mapperResult">
+	</resultMap>
+	
+	<select id="select" parameterType="mapper" resultMap="mapperResult">
+	</select>
+	
+	<select id="selectlist" parameterType="mapper" resultMap="mapperResult">
+	</select>
+	
+	<insert id="insert" parameterType="mapper">
+	</insert>
+	
+	<update id="update" parameterType="mapper">
+	</update>
+	
+	<delete id="delete" parameterType="mapper">
+	</delete>
+	
+</mapper>
